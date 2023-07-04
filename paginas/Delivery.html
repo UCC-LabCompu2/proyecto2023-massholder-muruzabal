@@ -1,154 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <title>Delivery</title>
-        <meta charset="UTF-8">
-        <meta name="autor" content="Juan Muruzabal y Kevin Massholder">
-        <meta name="keywords" content="Continental, Restaurante Continental">
-        <script
+<head>
+    <title>Delivery</title>
+    <meta charset="UTF-8">
+    <meta name="autor" content="Juan Muruzabal y Kevin Massholder">
+    <meta name="keywords" content="Continental, Restaurante Continental">
+    <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="../Index_Style.css" />
-        <script type="text/javascript" src="../Index_Javascript.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
+    <link rel="stylesheet" type="text/css" href="../Index_Style.css"/>
+    <script type="text/javascript" src="../Index_Javascript.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
             href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap"
             rel="stylesheet">
-        <link rel="icon" type="image/jpg"
-            href="Recursos/WhatsApp Image 2023-05-08 at 15.11.13.jpeg" />
-    </head>
+    <link rel="icon" type="image/jpg"
+          href="../Recursos/LogoContinental.jpeg"/>
+</head>
 
-    <body onload="CargarLocalStorage(); DeliveryOnload()">
-        <header>
-            <div class="container">
-                <nav id="navbar">
-                    <a href="../Index.html" target="_self">
-                        <img
-                            src="Recursos/WhatsApp Image 2023-05-08 at 15.11.13.jpeg"
-                            class="logo" alt="Imagen Logo">
-                    </a>
-                    <ul class="nav-menu">
-                        <li class="nav-link"><a href="../paginas/Carta.html">CARTA</a></li>
-                        <li class="nav-link"><a href="#delivery">DELIVERY</a></li>
-                        <li class="nav-link"><a href="../paginas/Reserva.html">RESERVA</a></li>
-                        <li class="nav-link"><a href="#ancla-contacto">CONTACTO</a></li>
+<body onload="CargarLocalStorage(); DeliveryOnload(); animarDesc(); animarDesc2()">
+<header>
+    <div class="container">
+        <nav id="navbar">
+            <a href="../Index.html" target="_self">
+                <img
+                        src="../Recursos/LogoContinental.jpeg"
+                        class="logo" alt="Imagen Logo">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-link"><a href="../paginas/Carta.html">CARTA</a></li>
+                <li class="nav-link"><a href="#delivery">DELIVERY</a></li>
+                <li class="nav-link"><a href="../paginas/Reserva.html">RESERVA</a></li>
+                <li class="nav-link"><a href="#ancla-contacto">CONTACTO</a></li>
 
-                    </ul>
-                </nav>
-            </div>
-        </header>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-        <div class="container">
-            <div id="CaraPrincipalDelivery">
-                <div class="registrodelivery">
-                    <h2>DELIVERY</h2>
+<div class="container">
+    <div id="CaraPrincipalDelivery">
+        <div class="registrodelivery">
+            <h2>DELIVERY</h2>
 
-                    <div id="delivery">
-
-                        <form class="cuadro" onsubmit="return false">
-                            <label for="NameDelivery"> Nombre y Apellido:</label><br>
-                            <input type="text" id="NameDelivery"
-                                placeholder="Nombre" required><br>
-                            <label for="EmailDelivery"> Correo electronico:
-                            </label><br>
-                            <input type="email" id="EmailDelivery"
-                                placeholder="Correo electronico" required><br>
-                            <label for="PhoneDelivery">Telefono Celular:</label><br>
-                            <input type="tel" id="PhoneDelivery"
-                                placeholder="Ej: 351 6517698"
-                                onchange="ChequeoValores(this.id, this.value, 'numero')"><br>
-                            <label for="DirectionDelivery"> Direccion del envio:</label><br>
-                            <input type="text" id="DirectionDelivery"
-                                placeholder="Direccion de envio" required><br>
-                            <div class="comida">
-                                <button onclick="Fmuestra('BotonDelivery')">Seleccione
-                                    su comida</button>
-                            </div>
-                            <label for="EnvioDelivery"> Explicaciones
-                                para el repartidor: </label><br>
-                            <textarea id="EnvioDelivery" cols="30"
-                                rows="10"
-                                placeholder="Introduzca la consideracion"
-                                required>
-                            </textarea><br>
-                            <input type="submit" name value="enviar"
-                                class="btn" onclick="CargaAnim()">
-                        </form>
-
-                        <div class="can">
-                            <h1>Su orden esta siendo preparada !!</h1>
-                            <canvas width="50" height="50" id="canvas"></canvas>
-                            <script> animacion() </script>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer id="FooterUnico">
-            <div class="InfoRes">
-                <a id="ancla-contacto"></a>
-                <h3>SOBRE NOSOTROS</h3><br>
-                <h4>UBICACION</h4>
-                <h5>Av. Poeta Leopoldo Lugones 352</h5>
-                <h4>HORARIOS</h4>
-                <h5>De lunes a domingo desde las 12 p.m hasta las 1 a.m
-                </h5>
-
-                <div class="Redes">
-                    <a class="Intro"> Nuestras redes </a>
-
-                    <nav id="navred">
-                        <a href="Index.html" target="_self">
-                            <img
-                                src="https://www.adverthia.com/wp-content/uploads/2020/02/instagram-logo-png-transparent-background-1024x1024-1.png"
-                                class="Logo1"
-                                alt="Link a la pagina de instagram">
-                        </a>
-                        <a href="Index.html" target="_self">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_de_Facebook.png"
-                                class="Logo1"
-                                alt="Link a la pagina de facebook">
-                        </a>
-                    </nav>
-                </div>
-            </div>
-
-            <div class="Contacto">
-                <h3>CONTACTO</h3>
-            </div>
-
-            <div class="Contactanos">
+            <div id="delivery">
 
                 <form class="cuadro" onsubmit="return false">
-                    <label for="Nombre"> Nombre y Apellido: </label><br>
-                    <input type="text" id="Nombre" placeholder="Nombre"
-                        required><br>
-                    <label for="Email"> Correo electronico: </label><br>
-                    <input type="email" id="Email" name="email"
-                        placeholder="Correo electronico" required><br>
-                    <label for="Telefono">Telefono Celular: </label><br>
-                    <input type="tel" id="Telefono"
-                        placeholder="Ej: 351 6517698"
-                        onchange="ChequeoValores(this.id, this.value, 'numero')"><br>
-                    <label for="Nota">Dejanos una nota: </label><br>
-                    <textarea id="Nota" cols="30" rows="10"
-                        placeholder="Introduzca la nota" required>
-                    </textarea><br>
-                    <button onclick="GuardarLocalStorage()">Enviar</button>
-                    <div id="EnviadoContacto">Enviado!</div>
-                </form>
-            </div>
-
-            <div class="creadores">
-                <h6>Esta pagina fue hecha por :</h6>
-                <h5>Kevin Massholder
+                    <label for="NameDelivery"> Nombre y Apellido:</label><br>
+                    <input type="text" id="NameDelivery"
+                           placeholder="Nombre" required
+                           class="FormularioDelivery"><br>
+                    <label for="EmailDelivery"> Correo electrónico:
+                    </label><br>
+                    <input type="email" id="EmailDelivery"
+                           placeholder="Correo electronico" required
+                           class="FormularioDelivery"><br>
+                    <label for="PhoneDelivery">Teléfono Celular:</label><br>
+                    <input type="tel" id="PhoneDelivery"
+                           placeholder="Ej: 351 6517698" required
+                           onchange="ChequeoValores(this.id, this.value, 'numero')"
+                           class="FormularioDelivery"><br>
+                    <label for="DirectionDelivery"> Dirección del envio:</label><br>
+                    <input type="text" id="DirectionDelivery"
+                           placeholder="Direccion de envio" required
+                           class="FormularioDelivery"><br>
+                    <div class="comida">
+                        <button onclick="Fmuestra('BotonDelivery')">Seleccione
+                            su comida
+                        </button>
+                    </div>
+                    <span id="muestraTotal"></span>
                     <br>
-                    Juan Ignacio Muruzabal</h5>
+
+                    <div id="Animacion">
+                        <span class="PremioCanvas">Con mayores compras, más posibilidades de ganar!</span> <br>
+                        <canvas id="CanvasBrazo1" width="400" height="250">
+                            Tu navegador no soporta el tag de HTML5 canvas.
+                        </canvas>
+                        <canvas id="CanvasBrazo2" width="400" height="250">
+                            Tu navegador no soporta el tag de HTML5 canvas.
+                        </canvas>
+                        <br>
+                    </div>
+                    <div id="Premio">
+                        <span class="PremioCanvas">Felicidades, ha ganado una pizza gratis!</span>
+                    </div>
+                    <br>
+                    <label for="EnvioDelivery"> Explicaciones
+                        para el repartidor: </label><br>
+                    <textarea id="EnvioDelivery" cols="30"
+                              rows="10"
+                              placeholder="Introduzca la consideracion"
+                              required class="FormularioDelivery">
+                            </textarea><br>
+                    <input type="submit" value="enviar"
+                           class="btn" onclick="CargaAnim()">
+                </form>
+
+                <div class="can">
+                    <h1>Su orden esta siendo preparada !!</h1>
+                    <canvas width="50" height="50" id="canvas"></canvas>
+                    <script> animacion() </script>
+                </div>
+
             </div>
-        </footer>
-    </body>
+        </div>
+    </div>
+</div>
+
+<footer id="FooterUnico">
+    <div class="InfoRes">
+        <a id="ancla-contacto"></a>
+        <h3>SOBRE NOSOTROS</h3><br>
+        <h4>UBICACIÓN</h4>
+        <h5>Av. Poeta Leopoldo Lugones 352</h5>
+        <h4>HORARIOS</h4>
+        <h5>De lunes a domingo desde las 12 p.m hasta las 1 a.m
+        </h5>
+
+        <div class="Redes">
+            <a class="Intro"> Nuestras redes </a>
+
+            <nav id="navred">
+                <a href="../Index.html" target="_self">
+                    <img
+                            src="../Recursos/LogoInstagram.png"
+                            class="Logo1"
+                            alt="Link a la pagina de instagram">
+                </a>
+                <a href="../Index.html" target="_self">
+                    <img
+                            src="../Recursos/LogoFacebook.png"
+                            class="Logo1"
+                            alt="Link a la pagina de facebook">
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="Contacto">
+        <h3>CONTACTO</h3>
+    </div>
+
+    <div class="Contactanos">
+
+        <form class="cuadro" onsubmit="return false">
+            <label for="Nombre"> Nombre y Apellido: </label><br>
+            <input type="text" id="Nombre" placeholder="Nombre" required
+                   class="FormularioContacto"><br>
+            <label for="Email"> Correo electrónico: </label><br>
+            <input type="email" id="Email" name="email"
+                   placeholder="Correo electronico" required
+                   class="FormularioContacto"><br>
+            <label for="Telefono">Teléfono Celular: </label><br>
+            <input type="tel" id="Telefono"
+                   placeholder="Ej: 351 6517698"
+                   onchange="ChequeoValores(this.id, this.value, 'numero')"
+                   required class="FormularioContacto"><br>
+            <label for="Nota">Déjanos una nota: </label><br>
+            <textarea id="Nota" cols="30" rows="10"
+                      placeholder="Introduzca la nota" required
+                      class="FormularioContacto">
+                    </textarea><br>
+            <button onclick="ContactoValidacion()">Enviar</button>
+            <div id="EnviadoContacto">Enviado!</div>
+        </form>
+    </div>
+
+    <div class="creadores">
+        <h6>Esta página fue hecha por :</h6>
+        <h5>Kevin Massholder
+            <br>
+            Juan Ignacio Muruzabal</h5>
+    </div>
+</footer>
+</body>
 </html>

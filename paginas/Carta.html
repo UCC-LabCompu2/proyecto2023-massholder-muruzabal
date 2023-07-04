@@ -1,279 +1,282 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <title>Carta</title>
-        <meta charset="UTF-8">
-        <meta name="autor" content="Juan Muruzabal y Kevin Massholder">
-        <meta name="keywords" content="Continental, Restaurante Continental">
-        <script
+<head>
+    <title>Carta</title>
+    <meta charset="UTF-8">
+    <meta name="autor" content="Juan Muruzabal y Kevin Massholder">
+    <meta name="keywords" content="Continental, Restaurante Continental">
+    <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="../Index_Style.css" />
-        <script type="text/javascript" src="../Index_Javascript.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
+    <link rel="stylesheet" type="text/css" href="../Index_Style.css"/>
+    <script type="text/javascript" src="../Index_Javascript.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
             href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap"
             rel="stylesheet">
-        <link
+    <link
             href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap"
             rel="stylesheet">
-        <link rel="icon" type="image/jpg"
-            href="Recursos/WhatsApp Image 2023-05-08 at 15.11.13.jpeg" />
-    </head>
+    <link rel="icon" type="image/jpg"
+          href="../Recursos/LogoContinental.jpeg"/>
+</head>
 
-    <body onload="CargarLocalStorage(); CartaOnload()">
-        <header>
-            <div class="container">
-                <nav id="navbar">
-                    <a href="../Index.html" target="_self">
-                        <img
-                            src="Recursos/WhatsApp Image 2023-05-08 at 15.11.13.jpeg"
-                            class="logo" alt="Imagen Logo">
-                    </a>
-                    <ul class="nav-menu">
-                        <li class="nav-link"><a href="#CaraPrincipalCarta">CARTA</a></li>
-                        <li class="nav-link"><a href="../paginas/Delivery.html">DELIVERY</a></li>
-                        <li class="nav-link"><a href="../paginas/Reserva.html">RESERVA</a></li>
-                        <li class="nav-link"><a href="#ancla-contacto">CONTACTO</a></li>
+<body onload="CargarLocalStorage(); CartaOnload()">
+<header>
+    <div class="container">
+        <nav id="navbar">
+            <a href="../Index.html" target="_self">
+                <img
+                        src="../Recursos/LogoContinental.jpeg"
+                        class="logo" alt="Imagen Logo">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-link"><a href="#CaraPrincipalCarta">CARTA</a></li>
+                <li class="nav-link"><a href="../paginas/Delivery.html">DELIVERY</a></li>
+                <li class="nav-link"><a href="../paginas/Reserva.html">RESERVA</a></li>
+                <li class="nav-link"><a href="#ancla-contacto">CONTACTO</a></li>
 
-                    </ul>
-                </nav>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<fieldset>
+    <div class="container">
+        <div id="CaraPrincipalCarta">
+            <div class="menu">
+                <table class="tablamenu" onchange="PreciosMenu()">
+                    <caption>
+                        <h6>|MENU|</h6>
+                    </caption>
+
+                    <thead>
+
+                    <th colspan="5">
+                        <h6>-Ensaladas-</h6>
+                    </th>
+
+                    <th colspan="5">
+                        <h6>-Sándwiches-</h6>
+                    </th>
+
+                    <th colspan="5">
+                        <h6>-Bebidas-</h6>
+                    </th>
+
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="Caprese"
+                                   class="MenuEspecial" value="20">
+                            <label for="Caprese">20</label></td>
+                        <td>...Caprese</td>
+
+                        <td>
+                            <input type="checkbox" id="Caesar"
+                                   class="MenuEspecial" value="12">
+                            <label for="Caesar">12</label></td>
+                        <td>...Caesar</td>
+                        <td class="separador"></td>
+                        <td>
+                            <input type="checkbox" id="Cubano"
+                                   class="MenuEspecial" value="50">
+                            <label for="Cubano">50</label></td>
+                        <td>...Cubano</td>
+
+                        <td>
+                            <input type="checkbox" id="Rucula"
+                                   class="MenuEspecial" value="60">
+                            <label for="Rucula">60</label></td>
+                        <td>...Rucula y Pera</td>
+                        <td class="separador"></td>
+                        <td>
+                            <input type="checkbox" id="Moscatto"
+                                   class="MenuEspecial" value="100">
+                            <label for="Moscatto">100</label></td>
+                        <td>...Moscatto</td>
+                        <td>
+                            <input type="checkbox" id="Heisenberg"
+                                   class="MenuEspecial" value="120">
+                            <label for="Heisenberg">120</label></td>
+                        <td>...Heisenberg</td>
+
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox"
+                                   id="Kartoffelsalat"
+                                   class="MenuEspecial" value="15">
+                            <label for="Kartoffelsalat">15</label></td>
+                        <td>...Kartoffelsalat</td>
+
+                        <td>
+                            <input type="checkbox" id="Waldorf"
+                                   class="MenuEspecial" value="20">
+                            <label for="Waldorf">20</label></td>
+                        <td>...Waldorf</td>
+                        <td class="separador"></td>
+                        <td>
+                            <input type="checkbox" id="Lionel"
+                                   class="MenuEspecial" value="300">
+                            <label for="Lionel">300</label></td>
+                        <td>...Lionel Messias</td>
+
+                        <td>
+                            <input type="checkbox"
+                                   id="PolloCrocante"
+                                   class="MenuEspecial" value="35">
+                            <label for="PolloCrocante">35</label></td>
+                        <td>...Pollo Crocante</td>
+                        <td class="separador"></td>
+                        <td>
+                            <input type="checkbox" id="Aperol"
+                                   class="MenuEspecial" value="144">
+                            <label for="Aperol">144</label></td>
+                        <td>...Aperol</td>
+                        <td>
+                            <input type="checkbox" id="Jagermeister"
+                                   class="MenuEspecial" value="122">
+                            <label for="Jagermeister">122</label></td>
+                        <td>...Jagermeister</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <input type="checkbox" id="Papa"
+                                   class="MenuEspecial" value="15">
+                            <label for="Papa">15</label></td>
+                        <td>...Papa y Mayo</td>
+
+                        <td>
+                            <input type="checkbox" id="MixNatural"
+                                   class="MenuEspecial" value="20">
+                            <label for="MixNatural">20</label></td>
+                        <td>...Mix MixNatura</td>
+                        <td class="separador"></td>
+                        <td>
+                            <input type="checkbox" id="Milanesa"
+                                   class="MenuEspecial" value="150">
+                            <label for="Milanesa">150</label></td>
+                        <td>...Con Milanesa</td>
+
+                        <td>
+                            <input type="checkbox" id="Picante"
+                                   class="MenuEspecial" value="135">
+                            <label for="Picante">135</label></td>
+                        <td>...Picante</td>
+                        <td class="separador"></td>
+                        <td>
+                            <input type="checkbox" id="SantaJulia"
+                                   class="MenuEspecial" value="70">
+                            <label for="SantaJulia">70</label></td>
+                        <td>...Santa Julia</td>
+                        <td>
+                            <input type="checkbox" id="WhiskyBlend"
+                                   class="MenuEspecial" value="1000">
+                            <label for="WhiskyBlend">1000</label></td>
+                        <td>...Whisky Blend</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="4">
+                            <input type="button" id="BotonMenu"
+                                   onclick="Fmuestra('BotonMenu')"
+                                   value="Delivery">
+                        </td>
+                        <td colspan="4">
+                            <div id="muestraTotal">
+                                Su total es:
+                            </div>
+                            <span id="sumatotal"></span>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
             </div>
-        </header>
 
-        <div>
-            <input type="checkbox" id="scales" name="scales" checked>
-            <label for="scales">Scales</label>
         </div>
+    </div>
+</fieldset>
+<footer id="FooterUnico">
+    <div class="InfoRes">
+        <a id="ancla-contacto"></a>
+        <h3>SOBRE NOSOTROS</h3><br>
+        <h4>UBICACIÓN</h4>
+        <h5>Av. Poeta Leopoldo Lugones 352</h5>
+        <h4>HORARIOS</h4>
+        <h5>De lunes a domingo desde las 12 p.m hasta las 1 a.m </h5>
 
-        <div>
-            <input type="checkbox" id="horns" name="horns">
-            <label for="horns">Horns</label>
+        <div class="Redes">
+            <a class="Intro"> Nuestras redes </a>
+
+            <nav id="navred">
+                <a href="../Index.html" target="_self">
+                    <img
+                            src="../Recursos/LogoInstagram.png"
+                            class="Logo1"
+                            alt="Link a la pagina de instagram">
+
+                </a>
+                <a href="../Index.html" target="_self">
+                    <img
+                            src="../Recursos/LogoFacebook.png"
+                            class="Logo1" alt="Link a la pagina de facebook">
+                </a>
+
+            </nav>
+
         </div>
-        <fieldset>
-            <div class="container">
-                <div id="CaraPrincipalCarta">
-                    <div class="menu">
-                        <table class="tablamenu">
-                            <caption>
-                                <h6>|MENU|</h6>
-                            </caption>
+    </div>
 
-                            <th></th>
-                            <th>
-                                <h6>-Ensaladas-</h6>
-                            </th>
-                            <th></th>
+    <div class="Contacto">
 
-                            <tr>
-                                <td>
-                                    <input type="checkbox" id="Caprese"
-                                        class="MenuEspecial">
-                                    <label for="Caprese">Caprese</label></td>
+        <h3>CONTACTO</h3>
 
-                                <td></td>
-                                <td>20</td>
-                            </tr>
+    </div>
 
-                            <tr>
-                                <td>
-                                    <input type="checkbox" id="Caesar"
-                                        class="MenuEspecial">
-                                    <label for="Caesar">Caesar</label></td>
+    <div class="Contactanos">
 
-                                <td></td>
-                                <td>12</td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <input type="checkbox" id="Kartoffelsalat"
-                                        class="MenuEspecial">
-                                    <label for="Kartoffelsalat">Kartoffelsalat</label></td>
-
-                                <td></td>
-                                <td>12</td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <input type="checkbox" id="Waldorf"
-                                        class="MenuEspecial">
-                                    <label for="Waldorf">Waldorf</label></td>
-
-                                <td></td>
-                                <td>10</td>
-                            </tr>
-
-                            <th></th>
-                            <th>
-                                <h6>-Sandwiches-</h6>
-                            </th>
-                            <th></th>
-
-                            <tr>
-                                <td>
-                                    <input type="checkbox" id="Cubano"
-                                        class="MenuEspecial">
-                                    <label for="Cubano">Cubano</label></td>
-
-                                <td></td>
-                                <td>40</td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <input type="checkbox" id="Rucula"
-                                        class="MenuEspecial">
-                                    <label for="Rucula">Rucula y Pera</label></td>
-
-                                <td></td>
-                                <td>60</td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <input type="checkbox" id="Lionel"
-                                        class="MenuEspecial">
-                                    <label for="Lionel">Lionel Messias</label></td>
-
-                                <td></td>
-                                <td>300</td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <input type="checkbox" id="PolloCrocante"
-                                        class="MenuEspecial">
-                                    <label for="PolloCrocante">Pollo Crocante</label></td>
-
-                                <td></td>
-                                <td>12</td>
-                            </tr>
-
-                            <th></th>
-                            <th>
-                                <h6>-Bebidas-</h6>
-                            </th>
-                            <th></th>
-                            <tr>
-                                <td>
-                                    <input type="checkbox" id="Moscatto"
-                                        class="MenuEspecial">
-                                    <label for="Moscatto">Moscatto........100</label></td>
-
-                                <td>
-                                    <input type="checkbox" id="Heisenberg"
-                                        class="MenuEspecial">
-                                    <label for="Heisenberg">Heisenberg........120</label></td>
-
-                                <td>
-                                    <input type="checkbox" id="Aperol"
-                                        class="MenuEspecial">
-                                    <label for="Aperol">Aperol........144</label></td>
-
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="checkbox" id="Jagermeister"
-                                        class="MenuEspecial">
-                                    <label for="Jagermeister">Jagermeister........122</label></td>
-
-                                <td>
-                                    <input type="checkbox" id="SantaJulia"
-                                        class="MenuEspecial">
-                                    <label for="SantaJulia">Santa Julia........7</label></td>
-
-                                <td>
-                                    <input type="checkbox" id="WhiskyBlend"
-                                        class="MenuEspecial">
-                                    <label for="WhiskyBlend">Whisky Blend........1000</label></td>
-
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td> <button id="BotonDelivery"
-                                        onclick="Fmuestra('BotonMenu')"> Volver
-                                        al Delivery</button></td>
-                                <td></td>
-                            </tr>
-                        </table>
-                    </div>
-
-                </div>
-            </div>
-        </fieldset>
-        <footer id="FooterUnico">
-            <div class="InfoRes">
-                <a id="ancla-contacto"></a>
-                <h3>SOBRE NOSOTROS</h3><br>
-                <h4>UBICACION</h4>
-                <h5>Av. Poeta Leopoldo Lugones 352</h5>
-                <h4>HORARIOS</h4>
-                <h5>De lunes a domingo desde las 12 p.m hasta las 1 a.m </h5>
-
-                <div class="Redes">
-                    <a class="Intro"> Nuestras redes </a>
-
-                    <nav id="navred">
-                        <a href="Index.html" target="_self">
-                            <img
-                                src="https://www.adverthia.com/wp-content/uploads/2020/02/instagram-logo-png-transparent-background-1024x1024-1.png"
-                                class="Logo1"
-                                alt="Link a la pagina de instagram">
-
-                        </a>
-                        <a href="Index.html" target="_self">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_de_Facebook.png"
-                                class="Logo1" alt="Link a la pagina de facebook">
-                        </a>
-
-                    </nav>
-
-                </div>
-            </div>
-
-            <div class="Contacto">
-
-                <h3>CONTACTO</h3>
-
-            </div>
-
-            <div class="Contactanos">
-
-                <form class="cuadro" onsubmit="return false">
-                    <label for="Nombre"> Nombre y Apellido: </label><br>
-                    <input type="text" id="Nombre" placeholder="Nombre" required><br>
-                    <label for="Email"> Correo electronico: </label><br>
-                    <input type="email" id="Email" name="email"
-                        placeholder="Correo electronico" required><br>
-                    <label for="Telefono">Telefono Celular: </label><br>
-                    <input type="tel" id="Telefono"
-                        placeholder="Ej: 351 6517698"
-                        onchange="ChequeoValores(this.id, this.value, 'numero')"
-                        required><br>
-                    <label for="Nota">Dejanos una nota: </label><br>
-                    <textarea name id="Nota" cols="30" rows="10"
-                        placeholder="Introduzca la nota" required>
+        <form class="cuadro" onsubmit="return false">
+            <label for="Nombre"> Nombre y Apellido: </label><br>
+            <input type="text" id="Nombre" placeholder="Nombre" required class="FormularioContacto"><br>
+            <label for="Email"> Correo electrónico: </label><br>
+            <input type="email" id="Email" name="email"
+                   placeholder="Correo electronico" required class="FormularioContacto"><br>
+            <label for="Telefono">Télefono Celular: </label><br>
+            <input type="tel" id="Telefono"
+                   placeholder="Ej: 351 6517698"
+                   onchange="ChequeoValores(this.id, this.value, 'numero')"
+                   required class="FormularioContacto"><br>
+            <label for="Nota">Déjanos una nota: </label><br>
+            <textarea id="Nota" cols="30" rows="10"
+                      placeholder="Introduzca la nota" required class="FormularioContacto">
                     </textarea><br>
-                    <button onclick="GuardarLocalStorage()">Enviar</button>
-                    <div id="EnviadoContacto">Enviado!</div>
-                </form>
+            <button onclick="ContactoValidacion()">Enviar</button>
+            <div id="EnviadoContacto">Enviado!</div>
+        </form>
 
-            </div>
+    </div>
 
-            <div class="creadores">
-                <h6>Esta pagina fue hecha por :</h6>
-                <h5>
-                    Kevin Massholder
-                    <br>
-                    Juan Ignacio Muruzabal
-                </h5>
-            </div>
+    <div class="creadores">
+        <h6>Esta página fue hecha por :</h6>
+        <h5>
+            Kevin Massholder
+            <br>
+            Juan Ignacio Muruzabal
+        </h5>
+    </div>
 
-        </footer>
+</footer>
 
-    </body>
+</body>
 </html>
